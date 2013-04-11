@@ -28,13 +28,14 @@
     .option('-x, --latency-flux [number]', 'Random number from 0..flux to add to latency to simulate variance', 100)    
     .option('-p, --port [number]', 'Port to listen on.', 7333)
     .parse(process.argv);
-
+    
+    
     log = new winston.Logger({
       transports: [
         new (winston.transports.Console)({
           timestamp: true,
           handleExceptions: true
-        })
+        }),
         new (winston.transports.File)({ filename: 'mockgcm.log' })
       ]
     });
