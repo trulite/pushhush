@@ -1,0 +1,16 @@
+{
+  "name": "pushhush",
+  "version": "0.0.1",
+  "author" : "trulite",
+  "description" : "Mock versions of APNS and GCM for load testing purposes",
+  "homepage" : "https://github.com/trulite/pushhush",
+  "preferGlobal" : true,
+  "bin":{ "mockapns" : "mockapns.js", "mockgcm" : "mockgcm.js" },
+  "dependencies": {
+    "net": ">=1.0.0",
+    "express": ">=1.0.0",
+    "winston":">= 0.5.6",
+    "commander": ">=0.3.2",
+    "underscore": ">= 0.0.1"
+  }
+}
