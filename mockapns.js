@@ -25,7 +25,8 @@
         new winston.transports.Console({
           timestamp: true,
           handleExceptions: true
-        })
+        }),
+        new (winston.transports.File)({ filename: 'mockapns.log' })
       ]
     });
     

@@ -1,6 +1,6 @@
 {
   "name": "pushhush",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author" : "trulite",
   "description" : "Mock versions of APNS and GCM for load testing purposes",
   "homepage" : "https://github.com/trulite/pushhush",

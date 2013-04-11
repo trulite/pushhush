@@ -35,6 +35,7 @@
           timestamp: true,
           handleExceptions: true
         })
+        new (winston.transports.File)({ filename: 'mockgcm.log' })
       ]
     });
 
@@ -156,6 +157,8 @@
 
     https.createServer(options, function(req, res) {
       return app.handle(req, res);
-    }).listen(443);
+    }).listen(443, function (){
+        console.log("* Started server on port 443 *");
+    });
 
 }).call(this);
