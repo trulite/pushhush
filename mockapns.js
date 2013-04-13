@@ -17,7 +17,7 @@
     .option('-d, --debug', 'Show various internal messages', false)
     .option('-l, --latency [milliseconds]', 'Simlated processing latency', 100)
     .option('-x, --latency-flux [number]', 'Random number from 0..flux to add to latency to simulate variance', 100)
-    .option('-p, --port [number]', 'Port to listen on.', 445)
+    .option('-p, --port [number]', 'Port to listen on.', 2195)
     .parse(process.argv);
     
     log = new winston.Logger({
@@ -91,6 +91,7 @@
         pBuf = new Buffer(payloadLength);
         data.copy(pBuf, 0, offset, offset+payloadLength);
         payload = pBuf.toString();
+        trace(x, "Payload: "+payload);
     };
     
     // Need this option so the client doesn't close 
