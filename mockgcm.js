@@ -18,7 +18,7 @@
 
     _ = require('underscore');
 
-    version = '0.0.1';
+    version = '0.0.3';
 
     program.version(version)
     .option('-d, --debug', 'Show various internal messages', false)
@@ -32,11 +32,7 @@
     
     log = new winston.Logger({
       transports: [
-        new (winston.transports.Console)({
-          timestamp: true,
-          handleExceptions: true
-        }),
-        new (winston.transports.File)({ filename: 'mockgcm.log' })
+        new (winston.transports.File)({ filename: 'mockgcm.log' , timestamp: true, handleExceptions: true})
       ]
     });
 
