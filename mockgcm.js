@@ -102,7 +102,7 @@
             
         cb = function() {
             trace(x, "Sending out data.");
-            return res.send("message_id="+data.message_id);
+            return res.send("id="+data.message_id);
         };
         
         if (Math.random() < program.crashRatio) {
