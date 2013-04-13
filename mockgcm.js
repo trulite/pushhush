@@ -129,7 +129,7 @@
     
         cb = function() {
             trace(x, "Sending out data.");
-            return res.send(data);
+            return res.send(JSON.stringify(data));
         };
         
         if (Math.random() < program.crashRatio) {
