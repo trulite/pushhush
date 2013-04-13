@@ -80,8 +80,12 @@
 
     app.post('/*', function(req, res) {
         var cb, data, failed, h, idcount, latency, origin_addr, passed, x;
-    
-        idcount = req.body.registration_ids.length;
+        
+        if(req.body.registration_ids){
+           idcount = req.body.registration_ids.length;
+        }else{
+            idcount = 1;
+        }
     
         failed = Math.floor(program.failureRatio * idcount);
         passed = idcount - failed;
